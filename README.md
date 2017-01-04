@@ -32,7 +32,7 @@ We build a modified treemap to display the threads of Reddit. Our modified treem
 
 <b>Here is our sreenshot of project</b>
 
-![alt Image of First Level](https://github.com/qyyMriel/Reddit-Monitor/blob/master/png/Hot1.png?raw=true)
+![alt Image of First Level](https://github.com/qyyMriel/Reddit-Monitor/blob/master/png/Top1.png?raw=true)
 
 ![alt Image of Second Level](https://github.com/qyyMriel/Reddit-Monitor/blob/master/png/Top2.png?raw=true)
 
