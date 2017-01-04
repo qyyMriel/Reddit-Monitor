@@ -32,11 +32,11 @@ We build a modified treemap to display the threads of Reddit. Our modified treem
 
 <b>Here is our sreenshot of project</b>
 
-![alt Image of First Level](https://github.com/qyyMriel/Reddit-Monitor/png/Hot1.png?raw=true)
+![alt Image of First Level](https://github.com/qyyMriel/SpO2-Tester/tree/master/png/Hot1.png?raw=true)
 
-![alt Image of Second Level](https://github.com/qyyMriel/Reddit-Monitor/png/Top2.png?raw=true)
+![alt Image of Second Level](https://github.com/qyyMriel/SpO2-Tester/tree/master/png/Top2.png?raw=true)
 
-![alt Image of Third Level](https://github.com/qyyMriel/Reddit-Monitor/png/Top33.png)
+![alt Image of Third Level](https://github.com/qyyMriel/SpO2-Tester/tree/master/png/Top33.png)
 
 ###Link
 
@@ -46,7 +46,7 @@ A heroku live app can be found here [link](http://redditmonitor17.herokuapp.com/
 
 You may need to wait for a moment because the server is extracting data from Reddit
 
-A final project report can be found here [link](https://github.com/qyyMriel/Reddit-Monitor/IVProjectFinalReport.pdf)
+A final project report can be found here [link](https://github.com/qyyMriel/SpO2-Tester/tree/master/IVProjectFinalReport.pdf)
 
 
 
