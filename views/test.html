@@ -1,0 +1,181 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="http://rawapk.com/wp-content/uploads/2016/04/Reddit-The-Official-App-Icon.png">
+<style>
+
+#chart1{
+ display: inline-block;
+ background: #4285F4;
+ width: 20px;
+ margin-right: 3px;
+}
+
+
+#chart {
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 26px;
+    padding-top:20px;
+    text-align: center;
+    margin-bottom: 5px;
+    height:2em;
+    text-shadow: 3px 2px #d2d5db;
+}
+
+
+text {
+  pointer-events: none;
+}
+
+body{
+  margin-top:10px;
+}
+
+.grandparent text {
+  font-weight: bold;
+}
+
+.ptext ctspan{
+  font-weight: bold
+  fill: #ec7063;
+  font-size: 30;
+/*  text-align: justify*/
+}
+
+.ctext {
+  font-weight: bold;
+  font-size: 20;
+  fill: #0e48a5;
+  text-align: justify；
+}
+.ltext {
+  font-weight: bold;
+  font-size: 20;
+  fill: #0e48a5;
+  text-align: justify；
+}
+.ytext {
+  font-weight: bold;
+  font-size: 20;
+  fill: #0e48a5;
+  text-align: justify；
+}
+
+rect {
+  fill: none;
+  stroke: #fff;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 13px;
+}
+
+.bar rect{
+  x:70,
+  y:500;
+}
+
+rect.parent {
+    padding: 100em;
+    padding-top:0px;
+    pointer-events: none;
+}
+
+.grandparent rect {
+  fill: orange;
+}
+
+.children rect.parent,
+.grandparent rect {
+  padding: 100em;
+  cursor: pointer;
+}
+
+.children rect.parent {
+  padding: 100em;
+  fill-opacity: .5;
+}
+
+
+.ctspan {
+  font-weight: bold;
+  fill: #4a235a;
+  padding-bottom: 200em;
+  font-size: 20;
+}
+#text{
+  font-weight:bold;
+  padding-right: 3em;
+  font-size:21px;
+  color: #f77487;
+}
+
+
+</style>
+</head>
+
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div id="photo"><img src="https://upload.wikimedia.org/wikipedia/zh/b/b4/Reddit_logo.svg" alt="Mountain View" style="width:20ex;height:6ex; float: left;margin-top:8px;margin-bottom:18px;}"> </div>
+
+<ul class="nav nav-pills" style="float: right; margin-right:20px;">
+  <li class="active"><a href="#top" data-toggle="tab" id="topTab">Top Thread</a></li>
+  <li><a href="#hot" data-toggle="tab" id="hotTab">Hot Thread</a></li>
+</ul>
+
+
+
+<div id="text" style="float: right; width:2px;height:6px;margin-top:6px;"></div>
+
+<div class="tab-content" style="margin-top:10px;">
+        <div class="tab-pane active" id="top">
+           <div id="chart"></div>
+        </div>
+        <div class="tab-pane" id="hot">
+           <div id="chart2"></div>
+        </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript"  src="/javascripts/ThreadUpdate.js"></script>
+<script type="text/javascript"  src="/javascripts/graphUpdate.js"></script>
+<script type="text/javascript"  src="/javascripts/HotThreadUpdate.js"></script>
+<script type="text/javascript"  src="/javascripts/HotGraphUpdate.js"></script>
+
+	<script>
+	var ThreadData = new ThreadUpdate();
+	    ThreadData.start();
+  var HotThreadData = new HotThreadUpdate();
+      HotThreadData.start();
+
+  document.getElementById('topTab').onclick = function() {
+      ThreadData.updateInterface();
+  }
+  document.getElementById('hotTab').onclick = function() {
+      HotThreadData.updateInterface();
+  }
+
+
+	</script>
+<script>
+
+
+window.addEventListener('message', function(e) {
+    var opts = e.data.opts,
+        data = e.data.data;
+
+    return main(opts, data);
+});
+
+</script>
+</body>
+</html>
