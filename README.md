@@ -1,11 +1,11 @@
-#Visualizing Reddit Monitor
+# Visualizing Reddit Monitor
 
 If you want to run the code locally, you should install several package:
 <b>npm install express, collections, snoowrap, keyword-extractor, ejs</b>.
 
 
 
-###How to run code locally
+### How to run code locally
 
 1. <b>Run server</b><br>
 Go to Reddit file and type node app.js to run the server
